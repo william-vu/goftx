@@ -106,13 +106,14 @@ func (f *FTXTime) UnmarshalJSON(data []byte) error {
 	sec, nsec := math.Modf(t)
 	// f.Time = time.Unix(int64(sec), int64(nsec))
 	// f.Time = time.Unix(int64(sec), int64(nsec))
-	fmt.Println(sec)
-	fmt.Println(nsec)
+	fmt.Println("109", sec)
+	fmt.Println("110", nsec)
 	f.Time = time.UnixMilli(int64(sec)*1000 + int64(nsec)/1000)
 	return nil
 }
 
 func (f FTXTime) MarshalJSON() ([]byte, error) {
+	fmt.Println("116", f.Time.UnixNano())
 	// return json.Marshal(float64(f.Time.UnixNano()) / float64(1000000000000))
 	return json.Marshal(float64(f.Time.UnixNano()) / float64(time.Millisecond))
 }
