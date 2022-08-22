@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/grishinsana/goftx/models"
+	"github.com/william-vu/goftx/models"
 )
 
 func TestStream_SubscribeToTickers(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grishinsana/goftx/models"
+	"github.com/william-vu/goftx/models"
 )
 
 func TestPrepareQueryParams(t *testing.T) {
