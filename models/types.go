@@ -107,8 +107,8 @@ func (f *FTXTime) UnmarshalJSON(data []byte) error {
 	sec, nsec := math.Modf(t)
 	// f.Time = time.Unix(int64(sec), int64(nsec))
 	// f.Time = time.Unix(int64(sec), int64(nsec))
-	// fmt.Println("109", sec)
-	// fmt.Println("110", nsec)
+	fmt.Println("109", sec)
+	fmt.Println("110", nsec)
 	f.Time = time.UnixMilli(int64(sec)*1000 + int64(nsec*1000))
 	return nil
 }
